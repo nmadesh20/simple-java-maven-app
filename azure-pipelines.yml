@@ -12,10 +12,10 @@ variables:
   azureSubscription: '4c27f91a-48ea-4e91-8a68-6b6be10b7d4f'
 
   # Web app name
-  webAppName: 'myjavawebapp02212022'
+  webAppName: 'mylinuxwebapp0222'
 
   # Environment name
-  environmentName: 'myjavawebapp02212022'
+  environmentName: 'mylinuxwebapp0222'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -60,7 +60,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: myjavawebapp02212022'
+            displayName: 'Azure Web App Deploy: mylinuxwebapp0222'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
