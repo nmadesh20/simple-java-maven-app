@@ -10,6 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
@@ -19,6 +20,10 @@ steps:
     cliProjectKey: 'sonar.simplejava'
     cliProjectName: 'simplejava'
     cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      sonar.exclusions=**/*.java
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
